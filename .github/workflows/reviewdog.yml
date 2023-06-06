@@ -2,13 +2,12 @@ name: reviewdog
 on: [pull_request]
 jobs:
   eslint:
-    name: runner / eslint
+    name: runner
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: eslint
-        uses: reviewdog/action-eslint@v1
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-eslint@v1
         with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
-          eslint_flags: "--ext .vue,.js --ignore-path .gitignore ."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          eslint_flags: "--ignore-path .gitignore *.{vue,js}"
