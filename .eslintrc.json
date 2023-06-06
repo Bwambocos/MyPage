@@ -8,8 +8,8 @@
     "eslint:recommended",
     "plugin:nuxt/recommended",
     "plugin:vue/vue3-essential",
-    // "plugin:@typescript-eslint/recommended",
-    // "@nuxtjs/eslint-config-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "@nuxtjs/eslint-config-typescript",
     "@vue/prettier"
   ],
   "parserOptions": {
@@ -18,7 +18,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    // "@typescript-eslint",
+    "@typescript-eslint",
     "vue"
   ],
   "rules": {}
